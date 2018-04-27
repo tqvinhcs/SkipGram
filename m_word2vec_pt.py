@@ -325,7 +325,6 @@ def main():
         if step % args.avg_step == 0:
             if step > 0:
                 avg_loss /= args.avg_step
-            # The average loss is an estimate of the loss over the last 2000 batches.
             print '\tAverage loss at iter %6d:' % step, avg_loss
             avg_loss = 0
 
