@@ -329,7 +329,6 @@ def main():
             print '\tAverage loss at iter %6d:' % step, avg_loss
             avg_loss = 0
 
-        # Note that this is expensive (~20% slowdown if computed every 500 steps)
         if step % args.ckpt_step == 0:
             # Get embeddings of valid words and perform L2-normalization
             valid_embeddings = net.forward_v(batch_valid)
